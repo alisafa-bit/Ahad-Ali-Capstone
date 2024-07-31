@@ -1,4 +1,4 @@
-package FeatureSteps;
+package tek.bdd.s;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
