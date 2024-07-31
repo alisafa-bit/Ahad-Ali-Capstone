@@ -9,6 +9,5 @@ import org.junit.runner.RunWith;
         features = "classpath:features/SetupTest.feature",
         glue = "tek.bdd.steps"
 )
-
 public class TestRunner {
 }

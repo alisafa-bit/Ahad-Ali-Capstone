@@ -1,12 +1,10 @@
 package tek.bdd.base;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
-public class SetupBrowser {
+public class BaseSetup {
 private static WebDriver driver;
-
     public void setupBrowser(){
         //WebDriver instance
         //Navigation to retail
@@ -29,7 +27,6 @@ private static WebDriver driver;
     public WebDriver getDriver(){
         return driver;
     }
-
 }
 
 
