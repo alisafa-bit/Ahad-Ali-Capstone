@@ -13,7 +13,6 @@ public class SeleniumUtility extends BaseSetup {
     private WebElement waitForVisibility(By locator){
         return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-
     //Create a method to click on a given locator
     public void clickOnElement(By locator){
         getWait().until(ExpectedConditions.elementToBeClickable(locator))
@@ -27,6 +26,7 @@ public class SeleniumUtility extends BaseSetup {
     public String getElementText(By locator){
         return waitForVisibility(locator).getText();
     }
+
     public boolean isElementEnabled(By locator) {
         return waitForVisibility(locator)
                 .isEnabled();

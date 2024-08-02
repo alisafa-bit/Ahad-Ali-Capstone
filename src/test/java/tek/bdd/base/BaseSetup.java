@@ -6,12 +6,8 @@ import java.time.Duration;
 public class BaseSetup {
 private static WebDriver driver;
     public void setupBrowser(){
-        //WebDriver instance
-        //Navigation to retail
-        //Maximize
-        //implicitly wait
         driver = new ChromeDriver();
-        driver.get("https://retail.tekschool-students.com/");
+        driver.get("https://retail.tekschool-students.com");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
