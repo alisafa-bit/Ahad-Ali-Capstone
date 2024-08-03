@@ -24,9 +24,23 @@ public class SecurityTestSteps extends SeleniumUtility {
         sentText(SignInPage.PASSWORD_INPUT,"Password_87");
         clickOnElement(SignInPage.CLICK_ON_BTN);
     }
+    @When("user enter {string} and {string} then click on login")
+    public void userEnterUserNameAndPassword(String username, String password) {
+        sentText(SignInPage.EMAIL_INPUT, username);
+        sentText(SignInPage.PASSWORD_INPUT, password);
+        clickOnElement(SignInPage.CLICK_ON_BTN);
+    }
+
     @Then("user should be able to see account link")
     public void userShouldBeAbleSeeAccountLink() {
        Boolean isAccountDisplayed = isElementEnabled(HomePage.ACCOUNT_LINK);
        Assert.assertTrue(isAccountDisplayed);
     }
+    @Then("user should see error {string}")
+    public void userShouldSeeError(String errorMessage) {
+        String mainMessage = getElementText(SignInPage.ERROR_MESSAGE);
+        Assert.assertEquals(errorMessage,mainMessage);
+    }
+
+
 }
