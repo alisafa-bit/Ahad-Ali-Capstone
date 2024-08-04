@@ -24,7 +24,7 @@ public class SecurityTestSteps extends SeleniumUtility {
         sentText(SignInPage.PASSWORD_INPUT,"Password_87");
         clickOnElement(SignInPage.CLICK_ON_BTN);
     }
-    @When("user enter {string} and {string} then click on login")
+    @When("user enter {string} and {string} and click on login")
     public void userEnterUserNameAndPassword(String username, String password) {
         sentText(SignInPage.EMAIL_INPUT, username);
         sentText(SignInPage.PASSWORD_INPUT, password);
