@@ -1,21 +1,19 @@
-Feature: security test scenario
-  Scenario: Navigate to sign in page and sign in with valid username and valid password.
-  Validate error message display "Wrong username or password"
-  #Given Open and closing browser is being called by Hooks
+@Smoke @Regression
+Feature: Security tests scenarios
+
+  Scenario: validate sign in functionality with valid credential
     When user click on sign in link
     Then validate user is in sign in page
-    When user enter "mnm87@gmail.com" and "Password_87" and click on login
+    When user enter "mohammad2536@gmail.com" and "Password@123" and click on login
     Then user should be able to see account link
 
-  Scenario Outline: Navigate to sign in page and sign in with valid username and invalid password.
-  Validate error message display "Wrong username or password"
-    #Given Open and closing browser is being called by Hooks
+  Scenario Outline: Validate sign in with invalid credentials
     When user click on sign in link
     Then validate user is in sign in page
     When user enter "<username>" and "<password>" and click on login
     Then user should see error "wrong username or password"
     Examples:
-    |username|password|
-    |mnm87@gmail.com|invalidPassword|
-    |mnm7@gmail.com|Password_87|
-    |mnm8s7@gmail.com|invalidPassword|
+      | username               | password      |
+      | invalid@gmail.com      | Password@123  |
+      | mohammad2536@gmail.com | WrongPassword |
+      | invalid@gmail.com      | WrongPassword |

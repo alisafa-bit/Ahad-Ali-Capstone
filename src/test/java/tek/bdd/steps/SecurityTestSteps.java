@@ -11,7 +11,7 @@ import tek.bdd.utility.SeleniumUtility;
 public class SecurityTestSteps extends SeleniumUtility {
     @When("user click on sign in link")
     public void userClickOnSignInLink() {
-        clickOnElement(HomePage.SIGN_IN_LINK);
+        clickOnElement(HomePage.SING_IN_LINK);
     }
     @Then("validate user is in sign in page")
     public void validateUserIsInSignInPage() {
@@ -20,14 +20,14 @@ public class SecurityTestSteps extends SeleniumUtility {
     }
     @When("user enter username and password and click on login")
     public void userEnterUsernameAndPasswordAndClickOnLogin() {
-        sentText(SignInPage.EMAIL_INPUT,"mnm87@gmail.com");
-        sentText(SignInPage.PASSWORD_INPUT,"Password_87");
+        sendText(SignInPage.EMAIL_INPUT,"mnm87@gmail.com");
+        sendText(SignInPage.PASSWORD_INPUT,"Password_87");
         clickOnElement(SignInPage.CLICK_ON_BTN);
     }
     @When("user enter {string} and {string} and click on login")
     public void userEnterUserNameAndPassword(String username, String password) {
-        sentText(SignInPage.EMAIL_INPUT, username);
-        sentText(SignInPage.PASSWORD_INPUT, password);
+        sendText(SignInPage.EMAIL_INPUT, username);
+        sendText(SignInPage.PASSWORD_INPUT, password);
         clickOnElement(SignInPage.CLICK_ON_BTN);
     }
 
