@@ -4,12 +4,11 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import tek.bdd.base.BaseSetup;
+import tek.bdd.base.BaseBrowser;
 import java.util.List;
-import java.awt.*;
 import java.time.Duration;
 
-public class SeleniumUtility extends BaseSetup {
+public class SeleniumUtility extends BaseBrowser {
     private static final Logger LOGGER = LogManager.getLogger(SeleniumUtility.class);
 
     private WebDriverWait getWait() {
