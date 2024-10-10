@@ -23,5 +23,4 @@ public class BaseSetup {
     public WebDriver getDriver(){
         return driver;
     }
-
 }
