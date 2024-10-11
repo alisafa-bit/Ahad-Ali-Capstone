@@ -1,9 +1,7 @@
 package tek.bdd.base;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-
 import java.time.Duration;
 
 public class BaseSetup {
@@ -12,7 +10,7 @@ public class BaseSetup {
 
     public void setupBrowser(){
         driver = new EdgeDriver();
-        driver.get("https://retail.tekschool-students.com");
+        driver.get("https://tek-retail-ui.azurewebsites.net/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }

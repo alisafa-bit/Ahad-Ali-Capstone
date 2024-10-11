@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:features/SetupTest.feature",
+        features = "classpath:features/SecurityTest.feature",
         glue = "tek.bdd.steps",
         dryRun = false,// true for unimplemented steps
      //   tags = "@Smoke",
