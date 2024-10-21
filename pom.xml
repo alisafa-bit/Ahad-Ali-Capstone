@@ -69,6 +69,12 @@
         <version>1.2.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>1.8.0</version> <!-- Choose a version compatible with Java 11 -->
+        </dependency>
+
     </dependencies>
 
     <build>

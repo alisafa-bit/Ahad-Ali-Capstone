@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:features/SecurityTest.feature",
+        features = "classpath:features",
         glue = "tek.bdd.steps",
         dryRun = false,// true for unimplemented steps
-     //   tags = "@Smoke",
+     //   tags = "@Test",
         plugin = {
                 "html:target/cucumber_report/index.html",
                 "json:target/jsonReport/report.json"
